@@ -64,7 +64,7 @@ class Layout extends Component {
               </div>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
-              {/*{this.renderSinglePost()}*/}
+              {this.renderSinglePost()}
               <div >
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>
