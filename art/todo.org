@@ -1,0 +1,25 @@
+* Politicl web server
+
+** DONE Clone the Telescope as the Politicl's template project.
+   CLOSED: [2016-08-23 Wed 22:29]
+   :LOGBOOK:
+   - State "DONE"       from ""           [2016-08-23 Wed 22:29]
+   :END:
+
+** Copy and paste the ProductHunte's Header
+
+*** DONE Do the HeaderContent's searchbar end
+    CLOSED: [2016-08-24 Wed 20:32]
+    :LOGBOOK:
+    - State "DONE"       from ""           [2016-08-24 Wed 20:32]
+    :END:
+
+** Posts list on the left panel
+
+*** DONE PostItems list
+    CLOSED: [2016-08-28 Sun 15:43]
+    :LOGBOOK:
+    - State "DONE"       from ""           [2016-08-28 Sun 15:43]
+    :END:
+
+*** Showing post details
