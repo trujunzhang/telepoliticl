@@ -1,45 +1,4 @@
 // @import '{}/node_modules/bootstrap/scss/bootstrap.scss';
-//https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat|Open+Sans
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
-
-body {
-  margin: 0;
-  min-height: 100%;
-  position: relative
-}
-
-@media (min-width: 769px) {
-  body {
-    background: #f9f9f9;
-  }
-}
-
-body.no-scroll {
-  overflow: hidden !important;
-  width: 100%
-}
-
-body.white-background {
-  background: white
-}
-
-body.api-v1-oauth-applications-index, body.api-v1-docs-index {
-  background: white
-}
-
-body.categories-posts-show {
-  display: flex;
-  flex-flow: column nowrap
-}
-
-body.categories-posts-show #unrouted-app-header + .page-main {
-  flex: 1
-}
-
-*, *::before, *::after {
-  -webkit-box-sizing: inherit;
-  box-sizing: content-box;
-}
 
 @import "breakpoints";
 @import "colors";
@@ -47,7 +6,6 @@ body.categories-posts-show #unrouted-app-header + .page-main {
 @import "spinner";
 @import "global";
 
-@import "producthunt";
 @import "accounts";
 @import "categories";
 @import "cheatsheet";
@@ -56,40 +14,34 @@ body.categories-posts-show #unrouted-app-header + .page-main {
 @import "newsletter";
 @import "other";
 @import "forms";
-@import "home";
 @import "posts";
-
-@import "postspopup";
-@import "postssingleheader";
-@import "postdetail";
-
 @import "users";
 
-.new-post-button {
+.new-post-button{
   margin-bottom: 15px;
 }
 
-code {
+code{
   font-family: monospace;
   background: #fafafa;
   border: 1px solid #ddd;
   padding: 3px 6px;
 }
 
-.avatar {
+.avatar{
   height: 24px;
   width: 24px;
   display: inline-block;
 }
 
-.sr-only {
+.sr-only{
   display: none;
 }
 
-.upvoted .upvote {
+.upvoted .upvote{
   opacity: 0.3;
 }
 
-.posts-day h2 {
+.posts-day h2{
   font-weight: bold;
 }

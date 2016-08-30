@@ -63,7 +63,7 @@ SearchForm.contextTypes = {
   currentRoute: React.PropTypes.object,
   currentUser: React.PropTypes.object,
   intl: intlShape
-};
+}
 
 module.exports = withRouter(SearchForm);
 export default withRouter(SearchForm);

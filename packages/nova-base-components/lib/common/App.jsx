@@ -1,3 +1,4 @@
+import Telescope from 'meteor/nova:lib';
 import React, { PropTypes, Component } from 'react';
 import { IntlProvider, intlShape} from 'react-intl';
 import { AppComposer } from "meteor/nova:core";
@@ -44,7 +45,7 @@ App.propTypes = {
   actions: React.PropTypes.object,
   events: React.PropTypes.object,
   messages: React.PropTypes.object,
-};
+}
 
 App.childContextTypes = {
   currentUser: React.PropTypes.object,
@@ -52,7 +53,7 @@ App.childContextTypes = {
   events: React.PropTypes.object,
   messages: React.PropTypes.object,
   intl: intlShape
-};
+}
 
 module.exports = AppComposer(App);
 export default AppComposer(App);

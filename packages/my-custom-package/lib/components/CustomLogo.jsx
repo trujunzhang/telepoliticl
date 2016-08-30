@@ -11,6 +11,6 @@ const CustomLogo = ({logoUrl, siteTitle}) => {
   return (
     <h1 className="logo-text"><IndexLink to="/">⭐{siteTitle}⭐</IndexLink></h1>
   )
-};
+}
 
 export default CustomLogo;

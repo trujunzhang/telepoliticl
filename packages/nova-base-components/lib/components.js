@@ -1,10 +1,9 @@
+import Telescope from 'meteor/nova:lib';
+
 // common
 
 Telescope.registerComponent("App",                  require('./common/App.jsx'));
 Telescope.registerComponent("Footer",               require('./common/Footer.jsx'));
-Telescope.registerComponent("HeaderSearchForm",     require('./common/HeaderSearchForm.jsx'));
-Telescope.registerComponent("HeaderContent",        require('./common/HeaderContent.jsx'));
-Telescope.registerComponent("HeaderNavigation",     require('./common/HeaderNavigation.jsx'));
 Telescope.registerComponent("Header",               require('./common/Header.jsx'));
 Telescope.registerComponent("Layout",               require('./common/Layout.jsx'));
 Telescope.registerComponent("Logo",                 require('./common/Logo.jsx'));
@@ -33,8 +32,6 @@ Telescope.registerComponent("PostsItem",            require('./posts/PostsItem.j
 Telescope.registerComponent("PostsLoading",         require('./posts/PostsLoading.jsx'));
 Telescope.registerComponent("PostsViews",           require('./posts/PostsViews.jsx'));
 Telescope.registerComponent("PostsList",            require('./posts/PostsList.jsx'));
-Telescope.registerComponent("PostsInfiniteList",    require('./posts/PostsInfiniteList.jsx'));
-Telescope.registerComponent("PostsListTitle",       require('./posts/PostsListTitle.jsx'));
 Telescope.registerComponent("PostsListHeader",      require('./posts/PostsListHeader.jsx'));
 Telescope.registerComponent("PostsCategories",      require('./posts/PostsCategories.jsx'));
 Telescope.registerComponent("PostsCommenters",      require('./posts/PostsCommenters.jsx'));
@@ -45,14 +42,7 @@ Telescope.registerComponent("PostsDay",             require('./posts/PostsDay.js
 Telescope.registerComponent("PostsThumbnail",       require('./posts/PostsThumbnail.jsx'));
 Telescope.registerComponent("PostsEditForm",        require('./posts/PostsEditForm.jsx'));
 Telescope.registerComponent("PostsNewForm",         require('./posts/PostsNewForm.jsx'));
-Telescope.registerComponent("PostsCommentsThread",  require('./posts/PostsCommentsThread.jsx'));
-
-// posts single
-
-Telescope.registerComponent("PostsPopup",           require('./single/PostsPopup.jsx'));
-Telescope.registerComponent("PostsSingleHeader",    require('./single/PostsSingleHeader.jsx'));
-Telescope.registerComponent("PostDetail",           require('./single/PostDetail.jsx'));
-Telescope.registerComponent("PostTagItem",          require('./single/PostTagItem.jsx'));
+Telescope.registerComponent("PostsCommentsThread",        require('./posts/PostsCommentsThread.jsx'));
 
 // comments
 
@@ -72,11 +62,7 @@ Telescope.registerComponent("CategoriesNewForm",    require('./categories/Catego
 
 // permissions
 
-Telescope.registerComponent("CanCreatePost",        require('./permissions/CanCreatePost.jsx'));
-Telescope.registerComponent("CanEditPost",          require('./permissions/CanEditPost.jsx'));
-Telescope.registerComponent("CanView",              require('./permissions/CanView.jsx'));
-Telescope.registerComponent("CanViewPost",          require('./permissions/CanViewPost.jsx'));
-Telescope.registerComponent("CanEditUser",          require('./permissions/CanEditUser.jsx'));
+Telescope.registerComponent("CanDo",                require('./permissions/CanDo.jsx'));
 
 // users
 
