@@ -6,12 +6,15 @@ const PostTagItem = () => {
 
     const subNavigationItems = [
         {
+            'id': 123,
             "href": "/tech",
             "title": "iPhonexxx"
         }, {
+            'id': 234,
             "href": "/games",
             "title": "Home"
         }, {
+            'id': 345,
             "href": "/podcasts",
             "title": "Furniture"
         }
@@ -24,9 +27,9 @@ const PostTagItem = () => {
                   return (
                     <div className="topicWrap_2Uvaj" rel="topic-item">
                         <span>
-                            <a
-                              className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
-                              href="/topics/iphone">
+                            <a key={menu.id}
+                               className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
+                               href="/topics/iphone">
                                 <div className="buttonContainer_wTYxi">{menu.title}</div>
                             </a>
                         </span>

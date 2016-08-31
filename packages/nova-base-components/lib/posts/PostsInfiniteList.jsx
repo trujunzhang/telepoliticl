@@ -11,7 +11,7 @@ class PostsInfiniteList extends Component {
             currentPage: 1,
             isLoadingMore: false,
             hasMoreItems: true,
-        }
+        };
         this.loadItems = this.loadItems.bind(this);
     }
 
@@ -82,7 +82,7 @@ class PostsInfiniteList extends Component {
             return;
         }
 
-        this.setState({isLoadingMore: true})
+        this.setState({isLoadingMore: true});
 
         //this.setState({ list: [...this.state.list, ...[newObject]] });
         let num = this.state.currentPage;
