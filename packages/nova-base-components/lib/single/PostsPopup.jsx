@@ -19,9 +19,7 @@ class PostsPopup extends Component {
         this.setState({loading: loading});
     }
 
-    closeDialog() {
-        this.context.messages.dismissPostPanel();
-    }
+
 
     renderDetail() {
         return (
