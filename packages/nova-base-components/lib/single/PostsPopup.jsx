@@ -8,10 +8,11 @@ class PostsPopup extends Component {
         super(props);
 
         const cachePost = this.props.document;
+        cachePost.registerPost(this);
         console.log(cachePost);
     }
 
-    render() {
+    renderDetail() {
         return (
           <div className="overlay_1AkSl modal-spotlight">
               <a className="closeDesktop_XydFN" title="Close" data-test="modal-close">
@@ -60,6 +61,13 @@ class PostsPopup extends Component {
               </div>
           </div>
         )
+    }
+
+    render() {
+        if (this.state.ready) {
+            return this.renderDetail();
+        }
+        return null;
     }
 }
 
