@@ -35,7 +35,7 @@ const PostsPage = ({document, currentUser}) => {
                       </div>
                       <div className="constraintWidth_ZyYbM body_1a08C">
                           {/*middle left*/}
-                          <Telescope.components.PostDetail/>
+                          <Telescope.components.PostDetail post={post} user={currentUser}/>
                       </div>
 
                   </div>
