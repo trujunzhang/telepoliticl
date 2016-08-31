@@ -7,9 +7,12 @@ class PostsPopup extends Component {
     constructor(props) {
         super(props);
 
+        this.state = this.initialState = {
+            ready: false,
+        };
+
         const cachePost = this.props.document;
         cachePost.registerPost(this);
-        console.log(cachePost);
     }
 
     renderDetail() {
@@ -63,11 +66,19 @@ class PostsPopup extends Component {
         )
     }
 
+    renderLoading() {
+        return (
+          <div class="placeholder_1WOC3">
+              <div class="loader_54XfI animationRotate loader_OEQVm"></div>
+          </div>
+        )
+    }
+
     render() {
         if (this.state.ready) {
             return this.renderDetail();
         }
-        return null;
+        return this.renderLoading();
     }
 }
 
