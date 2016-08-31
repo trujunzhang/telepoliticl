@@ -4,8 +4,9 @@ import Categories from "meteor/nova:categories";
 
 const PostsSingleHeader = (document, currentUser) => {
 
-    const post = document;
+    const post = document.post;
     const title = post.title;
+    //const customizeUrl = post.customize;
 
     return (
       <div>
@@ -15,8 +16,7 @@ const PostsSingleHeader = (document, currentUser) => {
 
                       <div className="info_F11MZ">
                           <div className="headlineContainer_3dPf_">
-                              <h1 className="headline_azIav inverse_1CN6F base_3CbW2">Reclaiming Lost Childhoods By
-                                  Rethinking Rehabilitation </h1>
+                              <h1 className="headline_azIav inverse_1CN6F base_3CbW2">{title} </h1>
                           </div>
                           <div className="actions_vQA0Z" data-test="post-actions">
                                 <span className="comboButton_1rStc tech_25H3R">
