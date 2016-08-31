@@ -182,3 +182,57 @@
   border: 1px solid #f2f2f2
 }
 
+// Loading
+
+.animationRotate {
+  -webkit-animation-name: rotate;
+  animation-name: rotate
+}
+
+.loader_54XfI {
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background-image: url(../../images/loading.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  content: space;
+  min-height: 25px;
+  min-width: 25px;
+  transition: opacity .1s ease;
+  height: 100%;
+  width: 100%
+}
+
+.placeholder_1WOC3 {
+  height: 100%;
+  max-width: 1072px;
+  margin: 0 auto;
+  background: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.loader_OEQVm {
+  width: 40px;
+  height: 40px
+}
+
+

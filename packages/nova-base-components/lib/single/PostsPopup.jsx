@@ -48,8 +48,8 @@ class PostsPopup extends Component {
 
     renderLoading() {
         return (
-          <div class="placeholder_1WOC3">
-              <div class="loader_54XfI animationRotate loader_OEQVm"></div>
+          <div className="placeholder_1WOC3">
+              <div className="loader_54XfI animationRotate loader_OEQVm"></div>
           </div>
         )
     }

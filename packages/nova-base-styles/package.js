@@ -22,4 +22,9 @@ Package.onUse(function (api) {
     'lib/stylesheets/main.scss'
   ], ['client']);
 
+  // client
+  api.addAssets([
+    'images/loading.png',
+  ], ['client']);
+
 });
