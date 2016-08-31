@@ -116,10 +116,11 @@ class PostsItem extends Component {
         const messages = this.context.messages;
         const postId = post._id;
 
+        messages.pushAndPostShow(postId);
+
         const router = this.props.router;
         delay(() => {
             router.push({pathname: path});
-            messages.pushAndPostShow(postId);
         }, 700);
     }
 
