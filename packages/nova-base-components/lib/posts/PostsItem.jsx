@@ -112,7 +112,8 @@ class PostsItem extends Component {
     popupDetail() {
         const post = this.props.post;
         const query = {};
-        const path = "/" + post.slug;
+        // /posts/${post._id}/${post.slug}
+        const path = "/posts" + post._id + "/" + post.slug;
         const messages = this.context.messages;
         const postId = post._id;
 
