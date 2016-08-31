@@ -13,7 +13,8 @@ class CachePost {
     const subscription = Meteor.subscribe('posts.single', {_id: this.postId});
     const document = Posts.findOne({_id: this.postId});
     this.ready = true;
-    this.comp.setState({ready: this.ready});
+    this.comp.setLoading(true);
+    //this.comp.setState({loading: this.ready});
   }
 }
 

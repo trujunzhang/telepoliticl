@@ -113,10 +113,13 @@ class PostsItem extends Component {
         const post = this.props.post;
         const query = {};
         const path = "/" + post.slug;
+        const messages = this.context.messages;
+        const postId = post._id;
 
         const router = this.props.router;
         delay(() => {
             router.push({pathname: path});
+            messages.pushAndPostShow(postId);
         }, 700);
     }
 
@@ -151,10 +154,11 @@ class PostsItem extends Component {
 
 PostsItem.propTypes = {
     post: React.PropTypes.object.isRequired
-}
+};
 
 PostsItem.contextTypes = {
-    currentUser: React.PropTypes.object
+    currentUser: React.PropTypes.object,
+    messages: React.PropTypes.object
 };
 
 module.exports = withRouter(PostsItem);

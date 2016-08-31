@@ -13,9 +13,11 @@ class Layout extends Component {
             isSearching: false,
             cachePost: null,
         };
+    }
 
-        const postId = "67964fa0bd17c1e8b5f5528c8343ec1d";
-        this.showCurrentPostPanel(postId);
+    componentDidMount() {
+        //const postId = "67964fa0bd17c1e8b5f5528c8343ec1d";
+        //this.showCurrentPostPanel(postId);
     }
 
     dismissCurrentPostPanel() {

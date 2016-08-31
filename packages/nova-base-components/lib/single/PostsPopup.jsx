@@ -8,11 +8,15 @@ class PostsPopup extends Component {
         super(props);
 
         this.state = this.initialState = {
-            ready: false,
+            loading: false,
         };
 
-        const cachePost = this.props.document;
-        cachePost.registerPost(this);
+        //const cachePost = this.props.document;
+        //cachePost.registerPost(this);
+    }
+
+    setLoading(loading) {
+        this.setState({loading: loading});
     }
 
     renderDetail() {
@@ -54,6 +58,13 @@ class PostsPopup extends Component {
         )
     }
 
+    renderSinglePost() {
+        if (this.state.loading) {
+            return this.renderDetail();
+        }
+        return this.renderLoading();
+    }
+
     render() {
         return (
           <div className="overlay_1AkSl modal-spotlight">
@@ -75,7 +86,7 @@ class PostsPopup extends Component {
                     </svg>
                 </span>
               </a>
-              {this.state.ready ? this.renderDetail() : this.renderLoading()}
+              {this.renderSinglePost()}
           </div>
         )
     }
