@@ -2,7 +2,10 @@ import React from 'react';
 import {ListContainer} from "meteor/utilities:react-list-container";
 import Categories from "meteor/nova:categories";
 
-const PostsSingleHeader = () => {
+const PostsSingleHeader = (document, currentUser) => {
+
+    const post = document;
+    const title = post.title;
 
     return (
       <div>
@@ -96,7 +99,7 @@ const PostsSingleHeader = () => {
           </header>
       </div>
     )
-}
+};
 
 PostsSingleHeader.displayName = "PostsSingleHeader";
 
