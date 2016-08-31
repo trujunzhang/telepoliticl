@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import {ListContainer} from "meteor/utilities:react-list-container";
 import Categories from "meteor/nova:categories";
 
-const PostsPopup = () => {
-    return (
-      <div className="overlay_1AkSl modal-spotlight">
-          <a className="closeDesktop_XydFN" title="Close" data-test="modal-close">
+class PostsPopup extends Component {
+
+    constructor(props) {
+        super(props);
+
+        const cachePost = this.props.document;
+        console.log(cachePost);
+    }
+
+    render() {
+        return (
+          <div className="overlay_1AkSl modal-spotlight">
+              <a className="closeDesktop_XydFN" title="Close" data-test="modal-close">
                 <span>
                     <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -13,8 +22,8 @@ const PostsPopup = () => {
                           fill-rule="evenodd"></path>
                     </svg>
                 </span>
-          </a>
-          <a className="closeMobile_15z3i" title="Close" data-test="modal-close">
+              </a>
+              <a className="closeMobile_15z3i" title="Close" data-test="modal-close">
                 <span>
                     <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -22,36 +31,37 @@ const PostsPopup = () => {
                           fill-rule="evenodd"></path>
                     </svg>
                 </span>
-          </a>
-          <div className="content_3X9xi">
+              </a>
+              <div className="content_3X9xi">
 
-              <div className="container_2uJxj">
-                  <section className="postSection_1iIbk">
-                      <div className="sectionContent_21Amp">
-                          {/* Top top */}
-                          <div>
-                              {/*header block*/}
-                              <Telescope.components.PostsSingleHeader />
+                  <div className="container_2uJxj">
+                      <section className="postSection_1iIbk">
+                          <div className="sectionContent_21Amp">
+                              {/* Top top */}
+                              <div>
+                                  {/*header block*/}
+                                  <Telescope.components.PostsSingleHeader />
+                              </div>
+                              <div className="constraintWidth_ZyYbM body_1a08C">
+                                  {/*middle left*/}
+                                  <Telescope.components.PostDetail/>
+                              </div>
+
                           </div>
-                          <div className="constraintWidth_ZyYbM body_1a08C">
-                              {/*middle left*/}
-                              <Telescope.components.PostDetail/>
+                      </section>
+                      <section className="popularTodaySection_30n6J">
+                          <div className="sectionContent_21Amp">
+
+
                           </div>
+                      </section>
+                  </div>
 
-                      </div>
-                  </section>
-                  <section className="popularTodaySection_30n6J">
-                      <div className="sectionContent_21Amp">
-
-
-                      </div>
-                  </section>
               </div>
-
           </div>
-      </div>
-    )
-};
+        )
+    }
+}
 
 PostsPopup.displayName = "PostsPopup";
 

@@ -1,4 +1,4 @@
-import SinglePost from "./singlepost.js";
+import CachePost from "./cachepost.js";
 
 class PostDetailSet {
   constructor() {
@@ -6,7 +6,7 @@ class PostDetailSet {
   }
 
   push(postId) {
-    let newPost = new SinglePost(postId);
+    let newPost = new CachePost(postId);
     this.stack.push(newPost);
     return newPost;
   }

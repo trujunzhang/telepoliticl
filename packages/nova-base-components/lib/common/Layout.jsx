@@ -11,27 +11,11 @@ class Layout extends Component {
         this.context.messages.layout = this;
         this.state = this.initialState = {
             isSearching: false,
-            currentPost: null,
-            index: 0,
-            ids: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            cachePost: null,
         };
 
         const postId = "67964fa0bd17c1e8b5f5528c8343ec1d";
         this.showCurrentPostPanel(postId);
-
-        //const postId = "67964fa0bd17c1e8b5f5528c8343ec1d";
-        //
-        //const options = {fields: Posts.publishedFields.single};
-        //const posts = Posts.find(postId, options);
-        //const post = posts.fetch()[0];
-        //
-        //const handle = Meteor.subscribe('posts.single', {_id: postId});
-        //
-        //Tracker.autorun(() => {
-        //    const isReady = handle.ready();
-        //    console.log(`Handle is ${isReady ? 'ready' : 'not ready'}`);
-        //});
-
     }
 
     dismissCurrentPostPanel() {
@@ -39,30 +23,13 @@ class Layout extends Component {
     }
 
     showCurrentPostPanel(postId) {
-        //let id = this.state.ids[(this.state.index )];
-        //this.setState({index: this.state.index + 1});
-
         this.context.messages.pushAndPostShow(postId);
     }
 
-    //renderSinglePost() { // For test
-    //    console.log("current post: " + this.state.currentPost);
-    //    if (this.state.currentPost != null) {
-    //        return (
-    //          <div>
-    //              <div>{this.state.currentPost}</div>
-    //              <button onClick={this.showCurrentPostPanel.bind(this)}>show current post panel</button>
-    //              <button onClick={this.dismissCurrentPostPanel.bind(this)}>dismiss current post panel</button>
-    //          </div>
-    //        )
-    //    }
-    //    return null;
-    //}
-
     renderSinglePost() {
-        if (this.state.currentPost != null) {
+        if (this.state.cachePost != null) {
             return (
-              <Telescope.components.PostsPopup document={this.state.currentPost}/>
+              <Telescope.components.PostsPopup document={this.state.cachePost}/>
             )
         }
         return null;
