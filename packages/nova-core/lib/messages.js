@@ -25,7 +25,7 @@ const Messages = {
   },
 
   dismissPostPanel(){
-    var currentPost = this.postDetailSet.lastPage()
+    var currentPost = this.postDetailSet.lastPage();
     this.layout.setState({currentPost: currentPost});
   },
 

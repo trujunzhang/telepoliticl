@@ -6,9 +6,7 @@ class PostDetailSet {
   }
 
   push(postId) {
-    this.isPopPage = true;
     this.stack.push(postId);
-
     return this.fetchPostPage(postId);
   }
 
