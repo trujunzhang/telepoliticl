@@ -19,6 +19,10 @@ class PostsPopup extends Component {
         this.setState({loading: loading});
     }
 
+    closeDialog() {
+        this.context.messages.dismissPostPanel();
+    }
+
     renderDetail() {
         return (
           <div className="content_3X9xi">
@@ -68,7 +72,7 @@ class PostsPopup extends Component {
     render() {
         return (
           <div className="overlay_1AkSl modal-spotlight">
-              <a className="closeDesktop_XydFN" title="Close" data-test="modal-close">
+              <a className="closeDesktop_XydFN" title="Close" data-test="modal-close" onClick={this.closeDialog()}>
                 <span>
                     <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -77,7 +81,7 @@ class PostsPopup extends Component {
                     </svg>
                 </span>
               </a>
-              <a className="closeMobile_15z3i" title="Close" data-test="modal-close">
+              <a className="closeMobile_15z3i" title="Close" data-test="modal-close" onClick={this.closeDialog()}>
                 <span>
                     <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path
