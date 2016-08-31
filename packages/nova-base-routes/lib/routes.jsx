@@ -29,7 +29,7 @@ Meteor.startup(() => {
     component: Telescope.components.App,
     indexRoute: Telescope.routes.indexRoute,
     childRoutes: Telescope.routes.routes
-  }
+  };
 
   let history;
 
