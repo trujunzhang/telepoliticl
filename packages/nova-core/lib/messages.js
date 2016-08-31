@@ -20,13 +20,13 @@ const Messages = {
   postDetailSet: new PostDetailSet(),
 
   pushAndPostShow(postId){
-    var currentPost = this.postDetailSet.push(postId);
-    this.layout.setState({currentPost: currentPost});
+    var cachePost = this.postDetailSet.push(postId);
+    this.layout.setState({cachePost: cachePost});
   },
 
   dismissPostPanel(){
-    var currentPost = this.postDetailSet.lastPage();
-    this.layout.setState({currentPost: currentPost});
+    var cachePost = this.postDetailSet.lastPage();
+    this.layout.setState({cachePost: cachePost});
   },
 
   markAsSeen(messageId) {
