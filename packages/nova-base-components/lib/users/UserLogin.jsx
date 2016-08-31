@@ -5,6 +5,14 @@ import Users from 'meteor/nova:users';
 
 class UserLogin extends Component {
 
+    loginTwitter(){
+
+    }
+
+    loginFacebook(){
+
+    }
+
     render() {
         return (
             <div className="modal-overlay v-fullscreen">
@@ -21,10 +29,10 @@ class UserLogin extends Component {
                         <p className="login-fullscreen--intro">Product Hunt is a community to share and geek out about the latest products, books, games and podcasts. Join us :)</p>
                         <span>
                             <div className="buttonGroup_1mB5C">
-                                <a className="button_2I1re mediumSize_10tzU secondaryBoldText_1PBCf secondaryText_PM80d twitterSolidColor_G22Bs solidVariant_2wWrf" rel="login-with-twitter" href="https://www.producthunt.com/auth/twitter?origin=%2F">
+                                <a className="button_2I1re mediumSize_10tzU secondaryBoldText_1PBCf secondaryText_PM80d twitterSolidColor_G22Bs solidVariant_2wWrf" rel="login-with-twitter" onClick={this.loginTwitter.bind(this)}>
                                     <div className="buttonContainer_wTYxi">Log in with twitter</div>
                                 </a>
-                                <a className="button_2I1re mediumSize_10tzU secondaryBoldText_1PBCf secondaryText_PM80d facebookSolidColor_pdgXp solidVariant_2wWrf" rel="login-with-facebook" href="https://www.producthunt.com/auth/facebook?origin=%2F">
+                                <a className="button_2I1re mediumSize_10tzU secondaryBoldText_1PBCf secondaryText_PM80d facebookSolidColor_pdgXp solidVariant_2wWrf" rel="login-with-facebook" onClick={this.loginFacebook.bind(this)}>
                                     <div className="buttonContainer_wTYxi">Log in with facebook</div>
                                 </a>
                             </div>
