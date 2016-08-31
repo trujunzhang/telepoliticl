@@ -48,6 +48,8 @@ body.categories-posts-show #unrouted-app-header + .page-main {
 @import "global";
 
 @import "producthunt";
+@import "application";
+
 @import "accounts";
 @import "categories";
 @import "cheatsheet";
