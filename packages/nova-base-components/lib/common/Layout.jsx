@@ -32,12 +32,15 @@ class Layout extends Component {
 
     renderPostSingle(cachePost) {
         const postId = cachePost.postId;
+        const params = {
+            _id: postId
+        };
         return (
           <DocumentContainer
             collection={Posts}
             publication="posts.single"
             selector={{_id: postId}}
-            terms={props.params}
+            terms={params}
             joins={Posts.getJoins()}
             component={Telescope.components.PostsPage}
             loading={<div className="placeholder_1WOC3">
