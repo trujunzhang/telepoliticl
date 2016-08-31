@@ -175,4 +175,40 @@
   margin: 0 0 10px
 }
 
+.secondary_Yuxa5 {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap
+}
 
+@media (max-width: 768px) {
+  .secondary_Yuxa5 {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+}
+
+.website_2DCTF {
+  margin: 0 0 0 10px
+}
+
+.twitter_3_mOY {
+  margin: 0 0 0 10px
+}
+
+.twitter_3_mOY, .twitter_3_mOY > span {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex
+}
+
+.twitter_3_mOY path {
+  fill: #fff
+}
