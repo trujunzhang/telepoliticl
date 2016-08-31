@@ -16,7 +16,7 @@ const PostDetail = () => {
                           <div className="container_22rD3 post_image">
                               <img className="placeholder_E_0qw" height="315"
                                    src="http://www.dailypioneer.com/uploads/main/cl_story_image/T330_8868_Untitled-5.gif"
-                                   width="177.32517482517483"/>
+                                   width="auto"/>
                           </div>
                       </div>
                   </div>
