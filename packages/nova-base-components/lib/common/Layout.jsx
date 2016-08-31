@@ -30,7 +30,24 @@ class Layout extends Component {
 
 //<Telescope.components.PostsPopup document={this.state.cachePost}/>
 
-    renderSinglePost() {
+    renderPostSingle(cachePost) {
+        const postId = cachePost.postId;
+        return (
+          <DocumentContainer
+            collection={Posts}
+            publication="posts.single"
+            selector={{_id: postId}}
+            terms={props.params}
+            joins={Posts.getJoins()}
+            component={Telescope.components.PostsPage}
+            loading={<div className="placeholder_1WOC3">
+                <div className="loader_54XfI animationRotate loader_OEQVm"></div>
+            </div>}
+          />
+        )
+    }
+
+    renderPosts() {
         if (this.state.cachePost != null) {
             return (
               <div className="overlay_1AkSl modal-spotlight">
@@ -54,6 +71,7 @@ class Layout extends Component {
                     </svg>
                 </span>
                   </a>
+                  {this.renderPostSingle(this.state.cachePost)}
               </div>
             )
         }
@@ -63,10 +81,10 @@ class Layout extends Component {
     render() {
         let classValue = "wrapper";
         if (this.state.isSearching) {
-            classValue = classValue + " " + "search-mode";
+            classValue += " search-mode";
         }
         if (this.state.cachePost) {
-            classValue = classValue + " " + "no-scroll";
+            classValue += " no-scroll";
         }
 
         return (
@@ -81,7 +99,7 @@ class Layout extends Component {
               </div>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
-              {this.renderSinglePost()}
+              {this.renderPosts()}
               <div >
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>
