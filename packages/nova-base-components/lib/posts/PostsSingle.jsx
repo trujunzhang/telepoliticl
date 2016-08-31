@@ -3,6 +3,8 @@ import {DocumentContainer} from "meteor/utilities:react-list-container";
 import Posts from "meteor/nova:posts";
 
 const PostsSingle = (props, context) => {
+    const loading = <div className="placeholder_1WOC3"><div className="loader_54XfI animationRotate loader_OEQVm"></div></div>;
+
     return (
       <DocumentContainer
         collection={Posts}
@@ -11,6 +13,7 @@ const PostsSingle = (props, context) => {
         terms={props.params}
         joins={Posts.getJoins()}
         component={Telescope.components.PostsPage}
+        loading={loading}
       />
     )
 };
