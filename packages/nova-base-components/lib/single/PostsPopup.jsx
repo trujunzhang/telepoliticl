@@ -3,7 +3,6 @@ import {ListContainer} from "meteor/utilities:react-list-container";
 import Categories from "meteor/nova:categories";
 
 const PostsPopup = () => {
-
     return (
       <div className="overlay_1AkSl modal-spotlight">
           <a className="closeDesktop_XydFN" title="Close" data-test="modal-close">
@@ -52,9 +51,13 @@ const PostsPopup = () => {
           </div>
       </div>
     )
-}
+};
 
 PostsPopup.displayName = "PostsPopup";
+
+PostsPopup.contextTypes = {
+    messages: React.PropTypes.object
+};
 
 module.exports = PostsPopup;
 export default PostsPopup;
