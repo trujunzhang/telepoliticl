@@ -44,11 +44,11 @@ const UsersProfile = ({user}, {currentUser}) => {
 
 UsersProfile.propTypes = {
   user: React.PropTypes.object.isRequired,
-}
+};
 
 UsersProfile.contextTypes = {
   currentUser: React.PropTypes.object
-}
+};
 
 UsersProfile.displayName = "UsersProfile";
 

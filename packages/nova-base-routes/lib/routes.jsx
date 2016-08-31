@@ -21,7 +21,8 @@ Meteor.startup(() => {
     //{name:"posts.single",   path:"posts/:_id(/:slug)", component:Telescope.components.PostsSingle},
     {name:"users.single",   path:"users/:slug",        component:Telescope.components.UsersSingle},
     {name:"users.account",  path:"account",            component:Telescope.components.UsersAccount},
-    {name:"users.edit",     path:"users/:slug/edit",   component:Telescope.components.UsersAccount}
+    {name:"users.edit",     path:"users/:slug/edit",   component:Telescope.components.UsersAccount},
+    {name:"website.demo",   path:"/demo",              component:Telescope.components.UserProfileHeader}
   ]);
 
   const AppRoutes = {
@@ -37,7 +38,7 @@ Meteor.startup(() => {
     renderHook: ReactDOM.render,
     props: {
       onUpdate: () => {
-        Events.analyticsRequest(); 
+        Events.analyticsRequest();
         Messages.clearSeen();
       }
     }
@@ -46,15 +47,15 @@ Meteor.startup(() => {
   const serverOptions = {
     htmlHook: (html) => {
       const head = Helmet.rewind();
-      return html.replace('<head>', '<head>'+ head.title + head.meta + head.link);    
+      return html.replace('<head>', '<head>'+ head.title + head.meta + head.link);
     },
     preRender: (req, res) => {
       Cookie.plugToRequest(req, res);
     },
   };
-  
+
   ReactRouterSSR.Run(AppRoutes, clientOptions, serverOptions);
-  
+
   // note: we did like this at first
   // if (Meteor.isClient) {
   //   history = useNamedRoutes(useRouterHistory(createBrowserHistory))({ routes: AppRoutes });
