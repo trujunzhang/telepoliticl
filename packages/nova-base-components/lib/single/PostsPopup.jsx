@@ -75,9 +75,7 @@ class PostsPopup extends Component {
                     </svg>
                 </span>
               </a>
-              {
-                  this.props.ready ? this.renderDetail() : this.renderLoading()
-              }
+              {this.state.ready ? this.renderDetail() : this.renderLoading()}
           </div>
         )
     }
