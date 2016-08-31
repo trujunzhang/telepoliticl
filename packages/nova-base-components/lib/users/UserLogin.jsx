@@ -1,5 +1,5 @@
 import Telescope from 'meteor/nova:lib';
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import {DocumentContainer} from "meteor/utilities:react-list-container";
 import Users from 'meteor/nova:users';
 

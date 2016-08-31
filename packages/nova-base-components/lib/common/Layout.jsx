@@ -101,7 +101,7 @@ class Layout extends Component {
 
               <div>
                   <Telescope.components.Header {...this.props} />
-                  <Telescope.components.UserLogin {...this.props} />
+                  <Telescope.components.UserLogin />
               </div>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
