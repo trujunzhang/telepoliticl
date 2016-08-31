@@ -1,4 +1,4 @@
-import PostDetail from "./singlepost.js";
+import SinglePost from "./singlepost.js";
 
 class PostDetailSet {
   constructor() {
@@ -6,8 +6,9 @@ class PostDetailSet {
   }
 
   push(postId) {
-    this.stack.push(postId);
-    return this.fetchPostPage(postId);
+    let newPost = new SinglePost(postId);
+    this.stack.push(newPost);
+    return newPost;
   }
 
   lastPage() {
@@ -15,8 +16,8 @@ class PostDetailSet {
       return null;
     }
     this.stack.pop();
-    var last = this.stack[this.stack.length - 1];
-    return last;
+    var lastPost = this.stack[this.stack.length - 1];
+    return lastPost;
   }
 
   fetchPostPage(postId) {
