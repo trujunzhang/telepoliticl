@@ -1,5 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import {FlashContainer} from "meteor/nova:core";
+import {DocumentContainer} from "meteor/utilities:react-list-container";
+import Posts from "meteor/nova:posts";
 
 class Layout extends Component {
 
