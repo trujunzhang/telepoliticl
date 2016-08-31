@@ -38,8 +38,16 @@ class Layout extends Component {
     }
 
     render() {
+        let classValue = "wrapper";
+        if (this.state.isSearching) {
+            classValue = classValue + " " + "search-mode";
+        }
+        if (this.state.cachePost) {
+            classValue = classValue + " " + "no-scroll";
+        }
+
         return (
-          <div className={this.state.isSearching ? 'wrapper search-mode' : 'wrapper'} id="wrapper">
+          <div className={classValue} id="wrapper">
 
               <Telescope.components.HeadTags />
 
