@@ -22,4 +22,28 @@
     - State "DONE"       from ""           [2016-08-28 Sun 15:43]
     :END:
 
-*** Showing post details
+*** DONE Showing post details
+    CLOSED: [2016-08-31 Wed 16:29]
+    :LOGBOOK:
+    - State "DONE"       from ""           [2016-08-31 Wed 16:29]
+    :END:
+
+
+
+** Widgets for the right panel
+
+*** Login widgets
+
+*** Tags widgets
+
+*** Mobile Client Apps
+
+
+** Registered User Dashboard
+
+*** User UI
+
+
+** New Features
+
+*** Client's requirement: We want the users to be able to add tags to the posts, but they should only be visible once we have approved them.
