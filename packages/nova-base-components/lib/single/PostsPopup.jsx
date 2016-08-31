@@ -19,8 +19,6 @@ class PostsPopup extends Component {
         this.setState({loading: loading});
     }
 
-
-
     renderDetail() {
         return (
           <div className="content_3X9xi">
@@ -54,7 +52,9 @@ class PostsPopup extends Component {
 
     renderLoading() {
         return (
-          <div className="placeholder_1WOC3"><div className="loader_54XfI animationRotate loader_OEQVm"></div></div>
+          <div className="placeholder_1WOC3">
+              <div className="loader_54XfI animationRotate loader_OEQVm"></div>
+          </div>
         )
     }
 
