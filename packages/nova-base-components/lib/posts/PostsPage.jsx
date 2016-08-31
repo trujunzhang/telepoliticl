@@ -37,7 +37,7 @@ const PostsPage = ({document, currentUser}) => {
                           {/*middle left*/}
                           <Telescope.components.PostDetail post={post} user={currentUser}/>
                       </div>
-
+                      <Telescope.components.PostsCommentsThread document={post} currentUser={currentUser}/>
                   </div>
               </section>
               <section className="popularTodaySection_30n6J">
