@@ -17,6 +17,45 @@ class PostsPopup extends Component {
 
     renderDetail() {
         return (
+          <div className="content_3X9xi">
+
+              <div className="container_2uJxj">
+                  <section className="postSection_1iIbk">
+                      <div className="sectionContent_21Amp">
+                          {/* Top top */}
+                          <div>
+                              {/*header block*/}
+                              <Telescope.components.PostsSingleHeader />
+                          </div>
+                          <div className="constraintWidth_ZyYbM body_1a08C">
+                              {/*middle left*/}
+                              <Telescope.components.PostDetail/>
+                          </div>
+
+                      </div>
+                  </section>
+                  <section className="popularTodaySection_30n6J">
+                      <div className="sectionContent_21Amp">
+
+
+                      </div>
+                  </section>
+              </div>
+
+          </div>
+        )
+    }
+
+    renderLoading() {
+        return (
+          <div class="placeholder_1WOC3">
+              <div class="loader_54XfI animationRotate loader_OEQVm"></div>
+          </div>
+        )
+    }
+
+    render() {
+        return (
           <div className="overlay_1AkSl modal-spotlight">
               <a className="closeDesktop_XydFN" title="Close" data-test="modal-close">
                 <span>
@@ -36,49 +75,11 @@ class PostsPopup extends Component {
                     </svg>
                 </span>
               </a>
-              <div className="content_3X9xi">
-
-                  <div className="container_2uJxj">
-                      <section className="postSection_1iIbk">
-                          <div className="sectionContent_21Amp">
-                              {/* Top top */}
-                              <div>
-                                  {/*header block*/}
-                                  <Telescope.components.PostsSingleHeader />
-                              </div>
-                              <div className="constraintWidth_ZyYbM body_1a08C">
-                                  {/*middle left*/}
-                                  <Telescope.components.PostDetail/>
-                              </div>
-
-                          </div>
-                      </section>
-                      <section className="popularTodaySection_30n6J">
-                          <div className="sectionContent_21Amp">
-
-
-                          </div>
-                      </section>
-                  </div>
-
-              </div>
+              {
+                  this.props.ready ? this.renderDetail() : this.renderLoading()
+              }
           </div>
         )
-    }
-
-    renderLoading() {
-        return (
-          <div class="placeholder_1WOC3">
-              <div class="loader_54XfI animationRotate loader_OEQVm"></div>
-          </div>
-        )
-    }
-
-    render() {
-        if (this.state.ready) {
-            return this.renderDetail();
-        }
-        return this.renderLoading();
     }
 }
 
