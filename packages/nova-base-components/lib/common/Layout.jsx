@@ -15,6 +15,20 @@ class Layout extends Component {
             index: 0,
             ids: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         };
+
+        const postId = "67964fa0bd17c1e8b5f5528c8343ec1d";
+
+        const options = {fields: Posts.publishedFields.single};
+        const posts = Posts.find(postId, options);
+        const post = posts.fetch()[0];
+
+        const handle = Meteor.subscribe('posts.single', {_id: postId});
+
+        Tracker.autorun(() => {
+            const isReady = handle.ready();
+            console.log(`Handle is ${isReady ? 'ready' : 'not ready'}`);
+        });
+
     }
 
     dismissCurrentPostPanel() {
@@ -64,7 +78,7 @@ class Layout extends Component {
               </div>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
-              {this.renderSinglePost()}
+              {/*{this.renderSinglePost()}*/}
               <div >
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>
