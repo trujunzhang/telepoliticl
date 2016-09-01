@@ -22,17 +22,27 @@ class Week extends Component {
                 isToday: date.isSame(new Date(), "day"),
                 date: date
             };
-            days.push(<span key={day.date.toString()}
-                            className={"day" + (day.isToday ? " today" : "") + (day.isCurrentMonth ? "" : " different-month") + (day.date.isSame(this.props.selected) ? " selected" : "")}
-                            onClick={this.props.select.bind(null, day)}>{day.number}</span>);
+            const _className = "day" + (day.isToday ? " today" : "") + (day.isCurrentMonth ? "" : " different-month") + (day.date.isSame(this.props.selected) ? " selected" : "");
+            days.push(
+              <td role="gridcell" title="2016-5-29" className="rc-calendar-cell rc-calendar-last-month-cell"
+                  key={day.date.toString()}>
+                  <div className="rc-calendar-date" aria-selected="false" aria-disabled="false"> {day.number}</div>
+              </td>
+
+              //<span key={day.date.toString()}
+              //              className={_className}
+              //              onClick={this.props.select.bind(null, day)}>
+              //              {day.number}
+              //              </span>
+            );
             date = date.clone();
             date.add(1, "d");
         }
 
         return (
-          <div className="week" key={days[0].toString()}>
+          <tr role="row" key={days[0].toString()}>
               {days}
-          </div>
+          </tr>
         )
     }
 }
