@@ -18,15 +18,27 @@ class Week extends Component {
             var day = {
                 name: date.format("dd").substring(0, 1),
                 number: date.date(),
+                lastMonth: date.month() <= month.month(),
                 isCurrentMonth: date.month() === month.month(),
+                nextMonth: date.month() >= month.month(),
+                disableMonth: date.month() >= month.month(),
                 isToday: date.isSame(new Date(), "day"),
                 date: date
             };
-            const _className = "day" + (day.isToday ? " today" : "") + (day.isCurrentMonth ? "" : " different-month") + (day.date.isSame(this.props.selected) ? " selected" : "");
+            var _className = "rc-calendar-cell" +
+              (day.isToday ? " rc-calendar-today" : "") +
+              (day.date.isSame(this.props.selected) ? " rc-calendar-selected-day" : "");
+            if (!day.isCurrentMonth) {
+                _className +=
+                  (day.lastMonth ? " rc-calendar-last-month-cell" : "") +
+                  (day.nextMonth ? " rc-calendar-next-month-btn-day" : "");
+            }
+
+            //className={"day" + (day.isToday ? " today" : "") + (day.isCurrentMonth ? "" : " different-month") + (day.date.isSame(this.props.selected) ? " selected" : "")}
             days.push(
-              <td role="gridcell" title="2016-5-29" className="rc-calendar-cell rc-calendar-last-month-cell"
+              <td role="gridcell" title="2016-5-29" className={_className}
                   key={day.date.toString()}>
-                  <div className="rc-calendar-date" aria-selected="false" aria-disabled="false"> {day.number}</div>
+                  <div className="rc-calendar-date" onClick={this.props.select.bind(null, day)}> {day.number}</div>
               </td>
 
               //<span key={day.date.toString()}
