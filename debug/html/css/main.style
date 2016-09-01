@@ -2456,17 +2456,6 @@ a.placeholderLink_ZzYXC {
     }
 }
 
-.fullWidthBox_3Dggh .header_3GFef + .content_DcBqe .placeholder_lYzpv {
-    margin-top: 20px;
-    margin-bottom: 20px
-}
-
-@media (max-width: 768px) {
-    .fullWidthBox_3Dggh .header_3GFef.hideOnSmallScreen_1VjPA + .content_DcBqe .placeholder_lYzpv {
-        margin-top: 0
-    }
-}
-
 .paddedBox_2UY-S .header_3GFef + * {
     margin-top: 20px
 }

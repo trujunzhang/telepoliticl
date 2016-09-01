@@ -67,7 +67,7 @@ const UsersProfile = ({user}, {currentUser}) => {
                             </div>
                             <div className="content_DcBqe">
                                 <div className="placeholder_lYzpv">
-                                    <span className="emoji_1lBv0">😩</span>
+                                    <span className="emoji_1lBv0 emoji_style">😩</span>
                                     <span className="text_3Wjo0 subtle_1BWOT base_3CbW2">No upvotes yet.</span>
                                 </div>
                             </div>

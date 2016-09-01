@@ -222,3 +222,23 @@ a.button_2I1re:active, button.button_2I1re:active {
 }
 
 
+.fullWidthBox_3Dggh .header_3GFef + .content_DcBqe .placeholder_lYzpv {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
+@media (max-width: 768px) {
+  .fullWidthBox_3Dggh .header_3GFef.hideOnSmallScreen_1VjPA + .content_DcBqe .placeholder_lYzpv {
+    margin-top: 0
+  }
+}
+
+.placeholder_lYzpv {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column;
+  text-align: center;
+}
