@@ -102,3 +102,8 @@ Telescope.registerComponent("Week",                 require('./widgetscalendar/W
 
 // widget for Topics
 Telescope.registerComponent("WidgetTopics",         require('./widgettopics/WidgetTopics.jsx'));
+
+
+// sidebar
+Telescope.registerComponent("WidgetHeader",         require('./sidebar/WidgetHeader.jsx'));
+
