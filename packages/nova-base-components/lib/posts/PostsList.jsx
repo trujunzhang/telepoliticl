@@ -20,6 +20,7 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
           <div className="sidebar_Y2LGQ">
 
               <Telescope.components.WidgetCalendar selected={moment().startOf("day")}/>
+              <Telescope.components.WidgetTopics />
 
           </div>
       </div>

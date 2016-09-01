@@ -99,3 +99,6 @@ Telescope.registerComponent("UserProfileHeader",    require('./users/UserProfile
 Telescope.registerComponent("WidgetCalendar",       require('./widgetscalendar/WidgetCalendar.jsx'));
 Telescope.registerComponent("DayNames",             require('./widgetscalendar/DayNames.jsx'));
 Telescope.registerComponent("Week",                 require('./widgetscalendar/Week.jsx'));
+
+// widget for Topics
+Telescope.registerComponent("WidgetTopics",         require('./widgettopics/WidgetTopics.jsx'));
