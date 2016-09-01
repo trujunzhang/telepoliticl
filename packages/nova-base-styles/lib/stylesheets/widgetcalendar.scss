@@ -1,6 +1,11 @@
+$calender_normal: #f36c3d;
 
 .calendar-header-container {
   position: relative;
+
+  a {
+    color: $calender_normal;
+  }
 }
 
 // tbody

@@ -13,13 +13,25 @@ class WidgetCalendar extends Component {
         };
     }
 
-    previous() {
+    previousYear() {
+        var month = this.state.month;
+        month.add(-1, "Y");
+        this.setState({month: month});
+    }
+
+    nextYear() {
+        var month = this.state.month;
+        month.add(1, "Y");
+        this.setState({month: month});
+    }
+
+    previousMonth() {
         var month = this.state.month;
         month.add(-1, "M");
         this.setState({month: month});
     }
 
-    next() {
+    nextMonth() {
         var month = this.state.month;
         month.add(1, "M");
         this.setState({month: month});
@@ -36,14 +48,14 @@ class WidgetCalendar extends Component {
 
         return (
           <div className="calendar-header-container">
-              <a className="rc-calendar-prev-year-btn" role="button" title="Last year (Control + left)">«</a>
-              <a className="rc-calendar-prev-month-btn" role="button" title="Previous month (PageUp)">‹</a>
+              <a className="rc-calendar-prev-year-btn" role="button" title="Last year (Control + left)" onClick={this.previousYear}>«</a>
+              <a className="rc-calendar-prev-month-btn" role="button" title="Previous month (PageUp)" onClick={this.previousMonth}>‹</a>
               <span className="rc-calendar-my-select">
                     <a className="rc-calendar-month-select" role="button" title="Choose a month">{month}</a>
                     <a className="rc-calendar-year-select" role="button" title="Choose a month">{year}</a>
                 </span>
-              <a className="rc-calendar-next-month-btn" title="Next month (PageDown)">›</a>
-              <a className="rc-calendar-next-year-btn" title="Next year (Control + right)">»</a>
+              <a className="rc-calendar-next-month-btn" title="Next month (PageDown)" onClick={this.nextMonth}>›</a>
+              <a className="rc-calendar-next-year-btn" title="Next year (Control + right)" onClick={this.nextYear}>»</a>
           </div>
         )
     }
@@ -62,8 +74,8 @@ class WidgetCalendar extends Component {
           <tr role="row">
               {daysNames.map((item, key) => {
                   return (
-                    <th role="columnheader" title={item.title} class="rc-calendar-column-header" key={item.value}>
-                        <span class="rc-calendar-column-header-inner">{item.value}</span>
+                    <th role="columnheader" title={item.title} className="rc-calendar-column-header" key={item.value}>
+                        <span className="rc-calendar-column-header-inner">{item.value}</span>
                     </th>
                   )
               })}
