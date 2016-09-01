@@ -36,7 +36,7 @@ class WidgetTopics extends Component {
           <div className="paddedBox_2UY-S box_c4OJj sidebarBox_1-7Yk sidebarBoxPadding_y0KxM">
               <div className="content_DcBqe">
 
-                  <Telescope.components.WidgetHeader message="Tags"/>
+                  <Telescope.components.WidgetHeader message="TRENDING"/>
 
                   <div className="sidebar-block sidebar-categories">
                       <h4 className="sidebar-heading">Categories</h4>
