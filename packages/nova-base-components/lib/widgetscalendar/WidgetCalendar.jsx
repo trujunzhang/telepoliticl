@@ -31,13 +31,16 @@ class WidgetCalendar extends Component {
     }
 
     renderHeader() {
+        const year = this.state.month.format("YYYY");
+        const month = this.state.month.format("MMMM");
+
         return (
           <div className="calendar-header-container">
               <a className="rc-calendar-prev-year-btn" role="button" title="Last year (Control + left)">«</a>
               <a className="rc-calendar-prev-month-btn" role="button" title="Previous month (PageUp)">‹</a>
               <span className="rc-calendar-my-select">
-                    <a className="rc-calendar-month-select" role="button" title="Choose a month">August</a>
-                    <a className="rc-calendar-year-select" role="button" title="Choose a month">2016</a>
+                    <a className="rc-calendar-month-select" role="button" title="Choose a month">{month}</a>
+                    <a className="rc-calendar-year-select" role="button" title="Choose a month">{year}</a>
                 </span>
               <a className="rc-calendar-next-month-btn" title="Next month (PageDown)">›</a>
               <a className="rc-calendar-next-year-btn" title="Next year (Control + right)">»</a>
@@ -46,22 +49,24 @@ class WidgetCalendar extends Component {
     }
 
     renderDayNames() {
+        const daysNames = [
+            {title: "Sunday", value: "Su"},
+            {title: "Monday", value: "Mo"},
+            {title: "Tuesday", value: "Tu"},
+            {title: "Wednesday", value: "We"},
+            {title: "Thursday", value: "Th"},
+            {title: "Friday", value: "Fr"},
+            {title: "Saturday", value: "Sa"},
+        ];
         return (
           <tr role="row">
-              <th role="columnheader" title="Sunday" class="rc-calendar-column-header">
-                  <span class="rc-calendar-column-header-inner">Su</span></th>
-              <th role="columnheader" title="Monday" class="rc-calendar-column-header">
-                  <span class="rc-calendar-column-header-inner">Mo</span></th>
-              <th role="columnheader" title="Tuesday" class="rc-calendar-column-header">
-                  <span class="rc-calendar-column-header-inner">Tu</span></th>
-              <th role="columnheader" title="Wednesday" class="rc-calendar-column-header">
-                  <span class="rc-calendar-column-header-inner">We</span></th>
-              <th role="columnheader" title="Thursday" class="rc-calendar-column-header">
-                  <span class="rc-calendar-column-header-inner">Th</span></th>
-              <th role="columnheader" title="Friday" class="rc-calendar-column-header">
-                  <span class="rc-calendar-column-header-inner">Fr</span></th>
-              <th role="columnheader" title="Saturday" class="rc-calendar-column-header">
-                  <span class="rc-calendar-column-header-inner">Sa</span></th>
+              {daysNames.map((item, key) => {
+                  return (
+                    <th role="columnheader" title={item.title} class="rc-calendar-column-header" key={item.value}>
+                        <span class="rc-calendar-column-header-inner">{item.value}</span>
+                    </th>
+                  )
+              })}
           </tr>
         )
     }
