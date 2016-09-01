@@ -1,6 +1,10 @@
 // @import '{}/node_modules/bootstrap/scss/bootstrap.scss';
 //https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat|Open+Sans
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+//@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+html {
+  font-family: 'proxima-nova', 'Proxima Nova', sans-serif
+}
 
 body {
   margin: 0;
@@ -47,6 +51,8 @@ body.categories-posts-show #unrouted-app-header + .page-main {
 @import "spinner";
 @import "global";
 
+@import "font";
+
 @import "producthunt";
 @import "application";
 
@@ -74,12 +80,12 @@ body.categories-posts-show #unrouted-app-header + .page-main {
   margin-bottom: 15px;
 }
 
-code {
-  font-family: monospace;
-  background: #fafafa;
-  border: 1px solid #ddd;
-  padding: 3px 6px;
-}
+//code {
+//  font-family: monospace;
+//  background: #fafafa;
+//  border: 1px solid #ddd;
+//  padding: 3px 6px;
+//}
 
 .avatar {
   height: 24px;
