@@ -1,0 +1,85 @@
+.rc-calendar {
+  outline: none;
+}
+
+.rc-calendar-header {
+  margin-bottom: 10px;
+}
+
+.rc-calendar-header > div {
+  display: flex;
+  align-items: center;
+}
+
+.rc-calendar-header > div .rc-calendar-prev-year-btn,
+.rc-calendar-header > div .rc-calendar-prev-month-btn,
+.rc-calendar-header > div .rc-calendar-next-month-btn,
+.rc-calendar-header > div .rc-calendar-next-year-btn {
+  border-radius: .25rem;
+  border: 1px solid #D9C8C1;
+  padding: 2px 6px;
+  display: block;
+  text-align: center;
+  flex-basis: 30px;
+}
+
+.rc-calendar-header > div .rc-calendar-prev-year-btn:hover,
+.rc-calendar-header > div .rc-calendar-prev-month-btn:hover,
+.rc-calendar-header > div .rc-calendar-next-month-btn:hover,
+.rc-calendar-header > div .rc-calendar-next-year-btn:hover {
+  background: #f36c3d;
+  color: #fff;
+  border-color: #f36c3d;
+  text-decoration: none;
+}
+
+.rc-calendar-header > div .rc-calendar-prev-year-btn {
+  margin-right: 5px;
+}
+
+.rc-calendar-header > div .rc-calendar-my-select {
+  flex-grow: 1;
+  pointer-events: none;
+  text-align: center;
+}
+
+.rc-calendar-header > div .rc-calendar-month-select {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.rc-calendar-header > div .rc-calendar-year-select {
+  display: inline-block;
+}
+
+.rc-calendar-header > div .rc-calendar-next-year-btn {
+  margin-left: 5px;
+}
+
+.rc-calendar-date {
+  display: block;
+  text-align: center;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: .25rem;
+}
+
+.rc-calendar-date:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.rc-calendar-today .rc-calendar-date {
+  font-family: "GT Eesti Text Medium", "Source Sans Pro", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #f36c3d;
+}
+
+.rc-calendar-selected-day .rc-calendar-date {
+  background: #f36c3d;
+  color: #fff;
+}
+
+.rc-calendar-disabled-cell {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.35;
+}

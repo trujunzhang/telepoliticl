@@ -30,16 +30,29 @@ class WidgetCalendar extends Component {
         this.forceUpdate();
     }
 
+    renderHeader() {
+        return (
+          <div style="position:relative;" data-reactid="1273"><a class="rc-calendar-prev-year-btn" role="button"
+                                                                 title="Last year (Control + left)" data-reactid="1274">«</a><a
+            class="rc-calendar-prev-month-btn" role="button" title="Previous month (PageUp)"
+            data-reactid="1275">‹</a><span class="rc-calendar-my-select" data-reactid="1276"><a
+            class="rc-calendar-month-select" role="button" title="Choose a month" data-reactid="1277">August</a><a
+            class="rc-calendar-year-select" role="button" title="Choose a month" data-reactid="1278">2016</a></span><a
+            class="rc-calendar-next-month-btn" title="Next month (PageDown)" data-reactid="1279">›</a><a
+            class="rc-calendar-next-year-btn" title="Next year (Control + right)" data-reactid="1280">»</a></div>
+        )
+    }
+
     render() {
         return (
-          <div>
-              <div className="header">
-                  <i className="fa fa-angle-left" onClick={this.previous}></i>
-                  {this.renderMonthLabel()}
-                  <i className="fa fa-angle-right" onClick={this.next}></i>
+          <div className="rc-calendar">
+              <div className="rc-calendar-date-panel">
+                  <div className="rc-calendar-header">
+                      {this.renderHeader()}
+                  </div>
+                  <Telescope.components.DayNames/>
+                  {this.renderWeeks()}
               </div>
-              <Telescope.components.DayNames/>
-              {this.renderWeeks()}
           </div>
         )
     }
