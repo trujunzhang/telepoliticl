@@ -33,17 +33,28 @@ class WidgetTopics extends Component {
             {href: "/?cat=color-theory", title: "WhatsApp-Facebook data sharing"},
         ];
         return (
-          <div className="sidebar-block sidebar-categories">
-              <h4 className="sidebar-heading">Categories</h4>
-              <ul className="categories-list">
-                  {topics.map((item, key) => {
-                      return (
-                        <li className="category-menu-item">
-                            <a className="posts-category" href={item.href}>{item.title}</a>
-                        </li>
-                      )
-                  })}
-              </ul>
+          <div className="paddedBox_2UY-S box_c4OJj sidebarBox_1-7Yk sidebarBoxPadding_y0KxM">
+              <div className="content_DcBqe">
+
+                  <div class="header_3GFef">
+                      <span
+                        class="sidebarTitle_25eeI secondaryBoldText_1PBCf secondaryText_PM80d default_tBeAo base_3CbW2">Upcoming Live Chats</span>
+                  </div>
+
+                  <div className="sidebar-block sidebar-categories">
+                      <h4 className="sidebar-heading">Categories</h4>
+                      <ul className="categories-list">
+                          {topics.map((item, key) => {
+                              return (
+                                <li className="category-menu-item">
+                                    <a className="posts-category" href={item.href}>{item.title}</a>
+                                </li>
+                              )
+                          })}
+                      </ul>
+                  </div>
+
+              </div>
           </div>
         )
     }
