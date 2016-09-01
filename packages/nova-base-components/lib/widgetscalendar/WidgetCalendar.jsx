@@ -125,7 +125,7 @@ class WidgetCalendar extends Component {
 
         while (!done) {
             weeks.push(<Telescope.components.Week key={date.toString()} date={date.clone()} month={this.state.month}
-                                                  select={this.select.bind(this)} selected={this.props.selected}/>);
+                                                  select={this.select.bind(this)} selected={this.state.month}/>);
             date.add(1, "w");
             done = count++ > 2 && monthIndex !== date.month();
             monthIndex = date.month();
