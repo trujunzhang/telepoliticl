@@ -295,13 +295,6 @@
   }
 }
 
-
-@media (min-width: 769px) {
-  .paddedBox_2UY-S {
-    padding: 0 20px
-  }
-}
-
 .header_3GFef {
   -webkit-align-items: baseline;
   -ms-flex-align: baseline;
@@ -322,17 +315,6 @@
     margin: 0 20px
   }
 }
-
-.paddedBox_2UY-S .header_3GFef + * {
-  margin-top: 20px
-}
-
-@media (max-width: 768px) {
-  .paddedBox_2UY-S .header_3GFef.hideOnSmallScreen_1VjPA + * {
-    margin-top: 0
-  }
-}
-
 
 // Style
 .emoji_style {

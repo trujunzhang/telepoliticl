@@ -57,11 +57,17 @@
   padding: 15px 0
 }
 
+@media (min-width: 769px) {
+  .paddedBox_2UY-S {
+    padding: 0 20px
+  }
+}
+
 .paddedBox_2UY-S .header_3GFef + * {
   margin-top: 20px
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .paddedBox_2UY-S .header_3GFef.hideOnSmallScreen_1VjPA + * {
     margin-top: 0
   }

@@ -68,20 +68,24 @@ class WidgetCalendar extends Component {
 
     render() {
         return (
-          <div className="rc-calendar">
-              <div className="rc-calendar-date-panel">
-                  <div className="rc-calendar-header">
-                      {this.renderHeader()}
-                  </div>
-                  <div className="rc-calendar-calendar-body">
-                      <table className="rc-calendar-table" cellspacing="0" role="grid">
-                          <thead >
-                          {this.renderDayNames()}
-                          </thead>
-                          <tbody className="rc-calendartbody">
-                          {this.renderWeeks()}
-                          </tbody>
-                      </table>
+          <div className="paddedBox_2UY-S box_c4OJj sidebarBox_1-7Yk sidebarBoxPadding_y0KxM">
+              <div className="content_DcBqe">
+                  <div className="rc-calendar">
+                      <div className="rc-calendar-date-panel">
+                          <div className="rc-calendar-header">
+                              {this.renderHeader()}
+                          </div>
+                          <div className="rc-calendar-calendar-body">
+                              <table className="rc-calendar-table" cellspacing="0" role="grid">
+                                  <thead >
+                                  {this.renderDayNames()}
+                                  </thead>
+                                  <tbody className="rc-calendartbody">
+                                  {this.renderWeeks()}
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
