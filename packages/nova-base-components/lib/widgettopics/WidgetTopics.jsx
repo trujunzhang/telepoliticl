@@ -13,7 +13,6 @@ class WidgetTopics extends Component {
 
     render() {
         const topics = [
-            {href: "/?cat=color-theory", title: ""},
             {href: "/?cat=color-theory", title: "Aam Aadmi Party"},
             {href: "/?cat=color-theory", title: "AAP in Punjab"},
             {href: "/?cat=color-theory", title: "Punjab polls"},
