@@ -38,7 +38,7 @@ class WidgetCalendar extends Component {
                   {this.renderMonthLabel()}
                   <i className="fa fa-angle-right" onClick={this.next}></i>
               </div>
-              <DayNames/>
+              <Telescope.components.DayNames/>
               {this.renderWeeks()}
           </div>
         )
@@ -52,8 +52,11 @@ class WidgetCalendar extends Component {
           count = 0;
 
         while (!done) {
-            weeks.push(<Week key={date.toString()} date={date.clone()} month={this.state.month} select={this.select}
-                             selected={this.props.selected}/>);
+            weeks.push(<Telescope.components.Week key={date.toString()}
+                                                  date={date.clone()}
+                                                  month={this.state.month}
+                                                  select={this.select}
+                                                  selected={this.props.selected}/>);
             date.add(1, "w");
             done = count++ > 2 && monthIndex !== date.month();
             monthIndex = date.month();

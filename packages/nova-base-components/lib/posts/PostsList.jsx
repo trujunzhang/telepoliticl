@@ -1,4 +1,5 @@
 import React from 'react';
+const moment = require('moment');
 
 const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loadMore, showHeader = true}) => {
 
@@ -17,6 +18,8 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
                                                       loadMore={loadMore}/>
           </section>
           <div className="sidebar_Y2LGQ">
+
+              <Telescope.components.WidgetCalendar selected={moment().startOf("day")}/>
 
           </div>
       </div>
