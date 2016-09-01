@@ -38,8 +38,11 @@ class WidgetCalendar extends Component {
     }
 
     select(day) {
-        this.props.selected = day.date;
-        this.forceUpdate();
+        this.setState({
+            month: day.date
+        });
+        //this.props.selected = day.date;
+        //this.forceUpdate();
     }
 
     renderHeader() {
@@ -48,14 +51,18 @@ class WidgetCalendar extends Component {
 
         return (
           <div className="calendar-header-container">
-              <a className="rc-calendar-prev-year-btn" role="button" title="Last year (Control + left)" onClick={this.previousYear.bind(this)}>«</a>
-              <a className="rc-calendar-prev-month-btn" role="button" title="Previous month (PageUp)" onClick={this.previousMonth.bind(this)}>‹</a>
+              <a className="rc-calendar-prev-year-btn" role="button" title="Last year (Control + left)"
+                 onClick={this.previousYear.bind(this)}>«</a>
+              <a className="rc-calendar-prev-month-btn" role="button" title="Previous month (PageUp)"
+                 onClick={this.previousMonth.bind(this)}>‹</a>
               <span className="rc-calendar-my-select">
                     <a className="rc-calendar-month-select" role="button" title="Choose a month">{month}</a>
                     <a className="rc-calendar-year-select" role="button" title="Choose a month">{year}</a>
                 </span>
-              <a className="rc-calendar-next-month-btn" title="Next month (PageDown)" onClick={this.nextMonth.bind(this)}>›</a>
-              <a className="rc-calendar-next-year-btn" title="Next year (Control + right)" onClick={this.nextYear.bind(this)}>»</a>
+              <a className="rc-calendar-next-month-btn" title="Next month (PageDown)"
+                 onClick={this.nextMonth.bind(this)}>›</a>
+              <a className="rc-calendar-next-year-btn" title="Next year (Control + right)"
+                 onClick={this.nextYear.bind(this)}>»</a>
           </div>
         )
     }
@@ -118,7 +125,7 @@ class WidgetCalendar extends Component {
 
         while (!done) {
             weeks.push(<Telescope.components.Week key={date.toString()} date={date.clone()} month={this.state.month}
-                                                  select={this.select} selected={this.props.selected}/>);
+                                                  select={this.select.bind(this)} selected={this.props.selected}/>);
             date.add(1, "w");
             done = count++ > 2 && monthIndex !== date.month();
             monthIndex = date.month();
