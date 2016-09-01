@@ -38,6 +38,8 @@ $calender_normal: #f36c3d;
 .rc-calendar-header > div {
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .rc-calendar-header > div .rc-calendar-prev-year-btn,
@@ -60,6 +62,11 @@ $calender_normal: #f36c3d;
   color: #fff;
   border-color: #f36c3d;
   text-decoration: none;
+}
+
+.rc-calendar-my-select {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .rc-calendar-header > div .rc-calendar-prev-year-btn {
