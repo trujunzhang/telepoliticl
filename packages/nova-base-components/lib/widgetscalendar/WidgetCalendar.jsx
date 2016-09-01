@@ -48,14 +48,14 @@ class WidgetCalendar extends Component {
 
         return (
           <div className="calendar-header-container">
-              <a className="rc-calendar-prev-year-btn" role="button" title="Last year (Control + left)" onClick={this.previousYear}>«</a>
-              <a className="rc-calendar-prev-month-btn" role="button" title="Previous month (PageUp)" onClick={this.previousMonth}>‹</a>
+              <a className="rc-calendar-prev-year-btn" role="button" title="Last year (Control + left)" onClick={this.previousYear.bind(this)}>«</a>
+              <a className="rc-calendar-prev-month-btn" role="button" title="Previous month (PageUp)" onClick={this.previousMonth.bind(this)}>‹</a>
               <span className="rc-calendar-my-select">
                     <a className="rc-calendar-month-select" role="button" title="Choose a month">{month}</a>
                     <a className="rc-calendar-year-select" role="button" title="Choose a month">{year}</a>
                 </span>
-              <a className="rc-calendar-next-month-btn" title="Next month (PageDown)" onClick={this.nextMonth}>›</a>
-              <a className="rc-calendar-next-year-btn" title="Next year (Control + right)" onClick={this.nextYear}>»</a>
+              <a className="rc-calendar-next-month-btn" title="Next month (PageDown)" onClick={this.nextMonth.bind(this)}>›</a>
+              <a className="rc-calendar-next-year-btn" title="Next year (Control + right)" onClick={this.nextYear.bind(this)}>»</a>
           </div>
         )
     }
