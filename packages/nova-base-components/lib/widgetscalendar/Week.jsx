@@ -23,6 +23,7 @@ class Week extends Component {
                 nextMonth: date.month() >= month.month(),
                 disableMonth: date.month() >= month.month(),
                 isToday: date.isSame(new Date(), "day"),
+                disable: date.isAfter(new Date(), "day"),
                 date: date
             };
             var _className = "rc-calendar-cell" +
@@ -33,8 +34,8 @@ class Week extends Component {
                   (day.lastMonth ? " rc-calendar-last-month-cell" : "") +
                   (day.nextMonth ? " rc-calendar-next-month-btn-day" : "");
             }
+            _className += (day.disable ? " rc-calendar-disabled-cell" : "");
 
-            //className={"day" + (day.isToday ? " today" : "") + (day.isCurrentMonth ? "" : " different-month") + (day.date.isSame(this.props.selected) ? " selected" : "")}
             days.push(
               <td role="gridcell" title="2016-5-29" className={_className}
                   key={day.date.toString()}>
