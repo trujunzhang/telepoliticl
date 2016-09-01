@@ -70,7 +70,7 @@ class PostsInfiniteList extends Component {
                       </div>
                       {hasMore ? (ready ? <Telescope.components.PostsLoadMore loadMore={loadMore} count={count}
                                                                               totalCount={totalCount}/> :
-                        <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
+                        <Telescope.components.PostsLoading/>) : null}
                   </div>
               </div>
           </div>
@@ -101,30 +101,7 @@ class PostsInfiniteList extends Component {
     }
 
     render() {
-        //const loader = <div><span
-        //  className="loading_2hQxH featured_2W7jd subtle_1BWOT base_3CbW2">No posts to display.</span></div>
-        //return (
-        //  <InfiniteScroll
-        //    threshold={80}
-        //    pageStart={0}
-        //    loadMore={this.props.loadMore}
-        //    hasMore={this.state.hasMoreItems}
-        //    loader={loader}>
-        //
-        //      {this.renderPostsList(this.state.posts, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore)}
-        //
-        //  </InfiniteScroll>
-        //)
-
-        let results = this.props.results;
-        let ready = this.props.ready;
-        if (!!results.length) {
-            return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
-        } else if (!ready) {
-            return this.renderLoading();
-        } else {
-            return this.renderNoResults();
-        }
+        return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
     }
 }
 
