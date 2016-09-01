@@ -1,5 +1,29 @@
+
+.calendar-header-container {
+  position: relative;
+}
+
+// tbody
+
 .rc-calendar {
   outline: none;
+}
+
+.rc-calendar .rc-calendar-table {
+  width: 100%;
+}
+
+.rc-calendar .rc-calendar-cell {
+  margin-bottom: 10px;
+}
+
+.rc-calendar .rc-calendar-last-month-cell,
+.rc-calendar .rc-calendar-next-month-btn-day {
+  opacity: 0.35;
+}
+
+.rc-calendar .rc-calendar-column-header {
+  text-align: center;
 }
 
 .rc-calendar-header {
@@ -82,8 +106,4 @@
   cursor: default;
   pointer-events: none;
   opacity: 0.35;
-}
-
-.calendar-header-container {
-  position: relative;
 }
