@@ -652,3 +652,6 @@ You can access a dynamically generated cheatsheet of Nova's main functions at [h
 
 
 node_modules/mup/bin/mup
+
+
+mongo mongodb://104.236.77.182:27017
