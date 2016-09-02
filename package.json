@@ -56,7 +56,7 @@
     }
   },
   "scripts": {
-    "mup_setup": "node_modules/mup/bin/mup setup --verbose",
-    "mup_deploy": "node_modules/mup/bin/mup deploy --verbose"
+    "mups": "node_modules/mup/bin/mup setup --verbose",
+    "mupd": "node_modules/mup/bin/mup deploy --verbose"
   }
 }
