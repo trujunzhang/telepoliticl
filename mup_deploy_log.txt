@@ -1,0 +1,55 @@
+Started TaskList: Deploy app 'meteor' (linux)
+[192.168.1.103] - Uploading bundle
+[192.168.1.103] - Uploading bundle: SUCCESS
+[192.168.1.103] - Setting up Environment Variables
+[192.168.1.103] - Setting up Environment Variables: SUCCESS
+[192.168.1.103] - Invoking deployment process
+[192.168.1.103] x Invoking deployment process: FAILED
+
+       	-----------------------------------STDERR-----------------------------------
+       	npm WARN package.json meteor-dev-bundle@0.0.0 No description
+       	npm WARN package.json meteor-dev-bundle@0.0.0 No repository field.
+       	npm WARN package.json meteor-dev-bundle@0.0.0 No README data
+       	npm WARN cannot run in wd meteor-dev-bundle@0.0.0 node npm-rebuild.js (wd=/opt/meteor/tmp/bundle/programs/server)
+       	stop: Unknown instance:
+       	  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+       	                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (7) Failed to connect to localhost port 3000: Connection refused
+       	App did not pick up! Please check app logs.
+       	-----------------------------------STDOUT-----------------------------------
+       	Y Release/fibers.node
+       	make: Leaving directory `/opt/meteor/tmp/bundle/programs/server/node_modules/fibers/build'
+       	Installed in `/opt/meteor/tmp/bundle/programs/server/node_modules/fibers/bin/linux-x64-v8-3.14/fibers.node`
+       	amdefine@1.0.0 node_modules/amdefine
+
+       	meteor-promise@0.7.2 node_modules/meteor-promise
+
+       	asap@2.0.4 node_modules/asap
+
+       	underscore@1.5.2 node_modules/underscore
+
+       	source-map-support@0.3.2 node_modules/source-map-support
+
+       	semver@4.1.0 node_modules/semver
+
+       	promise@7.1.1 node_modules/promise
+
+       	source-map@0.1.32 node_modules/source-map
+
+       	eachline@2.3.3 node_modules/eachline
+       	└── type-of@2.0.1
+
+       	chalk@0.5.1 node_modules/chalk
+       	├── ansi-styles@1.1.0
+       	├── escape-string-regexp@1.0.5
+       	├── supports-color@0.2.0
+       	├── has-ansi@0.1.0 (ansi-regex@0.2.1)
+       	└── strip-ansi@0.3.0 (ansi-regex@0.2.1)
+
+       	fibers@1.0.13 node_modules/fibers
+       	Waiting for MongoDB to initialize. (5 minutes)
+       	connected
+       	meteor start/running, process 1344
+       	Waiting for 15 seconds while app is booting up
+       	Checking is app booted or not?
+       	----------------------------------------------------------------------------
