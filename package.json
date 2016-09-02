@@ -43,7 +43,8 @@
   },
   "private": true,
   "devDependencies": {
-    "autoprefixer": "^6.3.6"
+    "autoprefixer": "^6.3.6",
+    "mup": "git+https://github.com/trujunzhang/meteor-up.git"
   },
   "postcss": {
     "plugins": {

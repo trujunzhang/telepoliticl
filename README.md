@@ -648,3 +648,7 @@ You can access a dynamically generated cheatsheet of Nova's main functions at [h
 
 - [Post By Feed](https://github.com/xavcz/nova-post-by-feed): register RSS feeds that will be fetched every 30 minutes to create new posts automatically.
 - [Nova-Slack](https://github.com/xavcz/nova-slack): A package that automatically sends your posts as messages to any connected Slack Team.
+
+
+
+node_modules/mup/bin/mup
