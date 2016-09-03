@@ -1,0 +1,1 @@
+node_modules/mup/bin/mup deploy --verbose

@@ -11,8 +11,6 @@ codekit-config.json
 
 config.rb
 
-deploy.sh
-
 .demeteorized
 
 dump/
