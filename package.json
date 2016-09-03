@@ -57,6 +57,7 @@
   },
   "scripts": {
     "mups": "node_modules/mup/bin/mup setup --verbose",
-    "mupd": "node_modules/mup/bin/mup deploy --verbose"
+    "mupd": "node_modules/mup/bin/mup deploy --verbose",
+    "test": "meteor test --driver-package practicalmeteor:mocha"
   }
 }

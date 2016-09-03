@@ -40,3 +40,6 @@ nova:debug
 ############ Your Packages ############
 
 # my-custom-package
+accounts-twitter
+accounts-facebook
+practicalmeteor:mocha
