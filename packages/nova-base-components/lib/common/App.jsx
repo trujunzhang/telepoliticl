@@ -31,7 +31,7 @@ class App extends Component {
         {
           this.props.ready ?
             <Telescope.components.Layout currentUser={this.props.currentUser}>{this.props.children}</Telescope.components.Layout>
-          : <Telescope.components.AppLoading />
+          : null
         }
       </IntlProvider>
     )
